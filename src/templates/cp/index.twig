@@ -1,0 +1,67 @@
+{% extends '_layouts/cp' %}
+{% do view.registerAssetBundle('\\lhs\\craftcms\\modules\\translations\\assetbundles\\CpAssetBundle') %}
+
+{% set title = 'index.title'|t('translations-module') %}
+{% set fullPageForm = true %}
+{% set actionButton = 'views.index.save'|t('translations-module') %}
+
+{% block content %}
+    {{ actionInput('translations-module/cp/save') }}
+
+    <div class="field">
+        <p class="instructions">{{ 'views.index.instructions'|t('translations-module')|raw }}</p>
+    </div>
+
+    {% for site in sites %}
+        <div id="{{ site.handle }}" {% if not loop.first %}class="hidden"{% endif %}>
+            <table class="fullwidth">
+                <thead>
+                    <tr>
+                        <th id="aria-label-key">{{ 'views.index.key'|t('translations-module') }}</th>
+                        <th id="aria-label-value">{{ 'views.index.value'|t('translations-module') }}</th>
+                    </tr>
+                </thead>
+                {% for item in (translations[site.id] ?? [])|sort((a, b) => a.translatableItemHandle <=> b.translatableItemHandle) %}
+                    <tr>
+                            <td>
+                                <input aria-labelledby="aria-label-key"
+                                       class="text fullwidth"
+                                       name="translations[{{ site.id }}][{{ item.translatableItemId }}][handle]"
+                                       value="{{ item.translatableItemHandle }}"
+                                />
+                            </td>
+                            <td>
+                                <input aria-labelledby="aria-label-value"
+                                       class="text fullwidth"
+                                       name="translations[{{ site.id }}][{{ item.translatableItemId }}][value]"
+                                       value="{{ item.value }}"
+                                />
+                            </td>
+                    </tr>
+                {% endfor %}
+                <tfoot>
+                    <tr>
+                        <th colspan="2">
+                            <hr>
+                            {{ 'views.index.add'|t('translations-module') }}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input aria-labelledby="aria-label-key"
+                                   class="text fullwidth"
+                                   name="translations[{{ site.id }}][new][handle]"
+                            >
+                        </td>
+                        <td>
+                            <input aria-labelledby="aria-label-key"
+                                   class="text fullwidth"
+                                   name="translations[{{ site.id }}][new][value]"
+                            >
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    {% endfor %}
+{% endblock %}

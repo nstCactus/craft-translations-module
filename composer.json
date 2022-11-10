@@ -1,0 +1,27 @@
+{
+    "name": "lahautesociete/craft-translations-module",
+    "description": "The simplest way to add administrable translations to a Craft CMS site",
+    "type": "library",
+    "require": {
+        "nstcactus/craft-utils": "^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "lhs\\craftcms\\modules\\translations\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "La Haute Société",
+            "email": "dev@lahautesociete.com",
+            "homepage": "https://www.lahautesociete.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "craftcms/plugin-installer": true,
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
