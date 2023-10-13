@@ -21,6 +21,8 @@ Allowed sections (level-3 headings) for each release are:
 
 ## [Unreleased]
 
+## [1.1.0] - 2023-10-13
+
 ### Added
 
 - Automatically add missing translatable items in the database
@@ -32,4 +34,5 @@ Allowed sections (level-3 headings) for each release are:
 
 
 [unreleased]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/compare/1.1.0...main
+[1.1.0]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/compare/1.0.0...1.1.0
 [1.0.0]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/-/tags/1.0.0
