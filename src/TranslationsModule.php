@@ -7,9 +7,12 @@ use craft\console\controllers\MigrateController;
 use craft\db\MigrationManager;
 use craft\events\RegisterMigratorEvent;
 use lhs\craftcms\modules\translations\i18n\DbMessageSource;
+use lhs\craftcms\modules\translations\models\TranslatableItem;
 use lhs\craftcms\modules\translations\services\TranslationService;
 use nstcactus\CraftUtils\AbstractModule;
 use yii\base\Event;
+use yii\i18n\MessageSource;
+use yii\i18n\MissingTranslationEvent;
 
 /**
  * @property TranslationService $translation
@@ -33,6 +36,7 @@ class TranslationsModule extends AbstractModule
         $this->set(self::SERVICE_TRANSLATION, TranslationService::class);
         $this->registerMigrator();
         $this->registerDynamicTranslationCategory();
+        $this->initAddMissingTranslations();
     }
 
     protected function getCpRoutes(): ?array
@@ -93,5 +97,32 @@ class TranslationsModule extends AbstractModule
                 'messageTable'       => $this->translationsTableName,
             ];
         }
+    }
+
+    protected function initAddMissingTranslations(): void
+    {
+        Event::on(
+            MessageSource::class,
+            MessageSource::EVENT_MISSING_TRANSLATION,
+            function (MissingTranslationEvent $event) {
+                if (!$event->message || $event->category !== $this->translationCategory) {
+                    return;
+                }
+
+                if (!Craft::$app->getRequest()->getIsSiteRequest()) {
+                    return;
+                }
+
+                $sourceMessage = TranslatableItem::find()
+                    ->where(['handle' => $event->message])
+                    ->one();
+
+                if (!$sourceMessage) {
+                    $sourceMessage = new TranslatableItem();
+                    $sourceMessage->handle = $event->message;
+                    $sourceMessage->save();
+                }
+            }
+        );
     }
 }
