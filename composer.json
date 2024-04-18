@@ -3,7 +3,7 @@
     "description": "The simplest way to add administrable translations to a Craft CMS site",
     "type": "library",
     "require": {
-        "nstcactus/craft-utils": "^3.0"
+        "nstcactus/craft-utils": "^3.0 || ^4.0"
     },
     "license": "MIT",
     "autoload": {

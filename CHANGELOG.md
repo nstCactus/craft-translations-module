@@ -21,6 +21,9 @@ Allowed sections (level-3 headings) for each release are:
 
 ## [Unreleased]
 
+### Added
+
+- Add Craft 5 compatibility
 
 ### Changed
 
