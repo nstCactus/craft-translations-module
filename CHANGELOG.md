@@ -21,6 +21,9 @@ Allowed sections (level-3 headings) for each release are:
 
 ## [Unreleased]
 
+
+## [2.0.0] - 2024-04-18
+
 ### Added
 
 - Add Craft 5 compatibility
@@ -42,6 +45,7 @@ Allowed sections (level-3 headings) for each release are:
 - First version of the module
 
 
-[unreleased]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/compare/1.1.0...main
+[unreleased]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/compare/2.0.0...main
+[2.0.0]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/compare/1.1.0...2.0.0
 [1.1.0]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/compare/1.0.0...1.1.0
 [1.0.0]: https://gitlab.com/lahautesociete/projects/lhs/craft-plugins/craft-plugins-translations-module/-/tags/1.0.0
