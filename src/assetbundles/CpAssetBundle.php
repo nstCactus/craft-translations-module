@@ -1,6 +1,6 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\assetbundles;
+namespace nstcactus\craftcms\modules\translations\assetbundles;
 
 use craft\web\AssetBundle;
 

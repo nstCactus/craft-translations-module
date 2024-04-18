@@ -21,6 +21,12 @@ Allowed sections (level-3 headings) for each release are:
 
 ## [Unreleased]
 
+
+### Changed
+
+- [BREAKING] change module namespace to `\nstcactus\craftcms\modules\translations`
+
+
 ## [1.1.0] - 2023-10-13
 
 ### Added

@@ -1,9 +1,9 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\records;
+namespace nstcactus\craftcms\modules\translations\records;
 
 use craft\db\ActiveRecord;
-use lhs\craftcms\modules\translations\TranslationsModule;
+use nstcactus\craftcms\modules\translations\TranslationsModule;
 use yii\db\ActiveQuery;
 
 /**

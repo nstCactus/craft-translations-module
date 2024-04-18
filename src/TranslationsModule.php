@@ -1,14 +1,14 @@
 <?php
 
-namespace lhs\craftcms\modules\translations;
+namespace nstcactus\craftcms\modules\translations;
 
 use Craft;
 use craft\console\controllers\MigrateController;
 use craft\db\MigrationManager;
 use craft\events\RegisterMigratorEvent;
-use lhs\craftcms\modules\translations\i18n\DbMessageSource;
-use lhs\craftcms\modules\translations\models\TranslatableItem;
-use lhs\craftcms\modules\translations\services\TranslationService;
+use nstcactus\craftcms\modules\translations\i18n\DbMessageSource;
+use nstcactus\craftcms\modules\translations\models\TranslatableItem;
+use nstcactus\craftcms\modules\translations\services\TranslationService;
 use nstcactus\CraftUtils\AbstractModule;
 use yii\base\Event;
 use yii\i18n\MessageSource;

@@ -1,5 +1,5 @@
 {
-    "name": "lahautesociete/craft-translations-module",
+    "name": "nstcactus/craft-translations-module",
     "description": "The simplest way to add administrable translations to a Craft CMS site",
     "type": "library",
     "require": {
@@ -8,14 +8,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "lhs\\craftcms\\modules\\translations\\": "src/"
+            "nstcactus\\craftcms\\modules\\translations\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "La Haute Société",
-            "email": "dev@lahautesociete.com",
-            "homepage": "https://www.lahautesociete.com"
+            "name": "nstcactus",
+            "email": "nstcactus@gmail.com",
+            "homepage": "https://github.com/nstcactus"
         }
     ],
     "config": {

@@ -5,16 +5,16 @@
 1. Install the module via composer: 
     
     ```shell
-    composer require lahautesociete/craft-translations-module
+    composer require nstcactus/craft-translations-module
     ```
 
 2. Load the module in the Craft `config/app.php` file:
-    
+
     ````php
     <?php return [
        'modules' => [
          'translations-module' => [ 
-           'class' => lhs\craftcms\modules\translations\TranslationsModule::class,
+           'class' => nstcactus\craftcms\modules\translations\TranslationsModule::class,
    
            // Optional properties
            'translationCategory' => 'dico',
@@ -42,7 +42,7 @@
 ## Roadmap
 
 - change the database schema to be as close as possible to `\yii\i18n\DbMessageSource` 
-  (ideally use it instead of `\lhs\craftcms\modules\translations\i18n\DbMessageSource`)
+  (ideally use it instead of `\nstcactus\craftcms\modules\translations\i18n\DbMessageSource`)
 - refactor the module to link translations to a language (`<lang>_<country>`) instead of a site ID
 - improve the UI:
   - make it easier to remove translations

@@ -1,13 +1,13 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\services;
+namespace nstcactus\craftcms\modules\translations\services;
 
 use Craft;
 use craft\base\Component;
 use craft\helpers\ArrayHelper;
 use craft\helpers\Json;
-use lhs\craftcms\modules\translations\records\TranslatableItemRecord;
-use lhs\craftcms\modules\translations\records\TranslationRecord;
+use nstcactus\craftcms\modules\translations\records\TranslatableItemRecord;
+use nstcactus\craftcms\modules\translations\records\TranslationRecord;
 use RuntimeException;
 
 class TranslationService extends Component

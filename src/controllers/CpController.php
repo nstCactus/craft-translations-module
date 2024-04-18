@@ -1,12 +1,12 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\controllers;
+namespace nstcactus\craftcms\modules\translations\controllers;
 
 use Craft;
 use craft\helpers\ArrayHelper;
 use craft\web\Controller;
-use lhs\craftcms\modules\translations\records\TranslatableItemRecord;
-use lhs\craftcms\modules\translations\TranslationsModule;
+use nstcactus\craftcms\modules\translations\records\TranslatableItemRecord;
+use nstcactus\craftcms\modules\translations\TranslationsModule;
 use yii\base\InvalidConfigException;
 use yii\web\BadRequestHttpException;
 use yii\web\Response;

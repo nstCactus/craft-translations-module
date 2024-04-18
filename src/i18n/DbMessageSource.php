@@ -1,6 +1,6 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\i18n;
+namespace nstcactus\craftcms\modules\translations\i18n;
 
 use craft\db\Query;
 use craft\helpers\ArrayHelper;

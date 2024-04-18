@@ -1,6 +1,6 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\models;
+namespace nstcactus\craftcms\modules\translations\models;
 
 use Craft;
 use yii\db\ActiveQuery;

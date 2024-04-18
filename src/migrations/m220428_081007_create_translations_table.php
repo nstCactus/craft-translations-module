@@ -1,10 +1,10 @@
 <?php
 
-namespace lhs\craftcms\modules\translations\migrations;
+namespace nstcactus\craftcms\modules\translations\migrations;
 
 use craft\db\Migration;
 use craft\db\Table;
-use lhs\craftcms\modules\translations\TranslationsModule;
+use nstcactus\craftcms\modules\translations\TranslationsModule;
 
 /**
  * m220428_081007_create_translations_table migration.
