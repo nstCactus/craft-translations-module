@@ -15,17 +15,14 @@ class DbMessageSource extends BaseDbMessageSource
      * @param string $language the target language.
      * @return array the messages loaded from database.
      * @throws Exception
-     * TODO: Refactor this method (and the DB) to use $language instead of $siteId
      */
     protected function loadMessagesFromDb($category, $language): array
-    {
-        $sites = ArrayHelper::map(\Craft::$app->getSites()->getAllSites(true), 'language', 'id');
-
+    {;
         $mainQuery = (new Query())->select(['message' => 't1.handle', 'translation' => 't2.translation'])
             ->from(['t1' => $this->sourceMessageTable])
             ->leftJoin(['t2' => $this->messageTable], 't1.id = t2.translationItemId')
             ->where([
-                't2.siteId' => $sites[$language] ?? -1,
+                't2.siteId' => \Craft::$app->getSites()->getCurrentSite()->id ?? -1,
             ]);
 
         $messages = $mainQuery->createCommand($this->db)->queryAll();

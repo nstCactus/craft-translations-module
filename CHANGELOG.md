@@ -21,6 +21,11 @@ Allowed sections (level-3 headings) for each release are:
 
 ## [Unreleased]
 
+### Fixed 
+
+- fix a bug on multi-tenant sites that caused translations from the last site of a given language to be returned instead
+  of the current site's translations
+
 
 ## [2.0.0] - 2024-04-18
 
