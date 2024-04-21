@@ -21,6 +21,8 @@ Allowed sections (level-3 headings) for each release are:
 
 ## [Unreleased]
 
+## [2.0.1] - 2024-04-18
+
 ### Fixed 
 
 - fix a bug on multi-tenant sites that caused translations from the last site of a given language to be returned instead
@@ -50,7 +52,8 @@ Allowed sections (level-3 headings) for each release are:
 - First version of the module
 
 
-[unreleased]: https://github.com/nstCactus/craft-translations-module/compare/2.0.0...main
+[unreleased]: https://github.com/nstCactus/craft-translations-module/compare/2.0.1...main
+[2.0.1]: https://github.com/nstCactus/craft-translations-module/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/nstCactus/craft-translations-module/compare/1.1.0...2.0.0
 [1.1.0]: https://github.com/nstCactus/craft-translations-module/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/nstCactus/craft-translations-module/releases/tag/1.0.0
